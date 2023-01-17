@@ -11,7 +11,7 @@ import IoniconsForward from "./assets/ionicons-forward.svg";
 let song = new Audio("./assets/Bom_Dia_Música.mp3");
 
 function Project01() {
-  const [cardState, SetCardState] = React.useState("");
+  const [cardState, SetCardState] = React.useState("collapsed");
   const [iconImage, SetIconImage] = React.useState(IoniconsPlay);
   const [timelineVisibility, setTimelineVisibility] =
     React.useState("invisible");
@@ -24,8 +24,10 @@ function Project01() {
             src="./assets/cover.jpg"
             alt="Capa da música Acorda Devinho, é como um monte de amoebas de cor roxa com um fundo lilás"
             onClick={() => {
-              if (window.outerWidth == 768) {
-                cardState == "" ? SetCardState("collapsed") : SetCardState("");
+              if (window.outerWidth >= 768) {
+                cardState == "collapsed"
+                  ? SetCardState("")
+                  : SetCardState("collapsed");
               }
             }}
           />

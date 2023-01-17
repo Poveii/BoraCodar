@@ -27,6 +27,24 @@ body {
     cursor: pointer;
     transition: all 0.2s ease-out;
   }
+
+  &.collapsed {
+    padding: 40px;
+
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+
+      img {
+        width: 190px;
+        height: 190px;
+      }
+    }
+
+    .player {
+      justify-content: space-between;
+    }
+  }
 }
 
 .header {
@@ -94,26 +112,6 @@ body {
   display: block;
   visibility: visible;
   animation: fromTop 0.4s ease-out;
-}
-
-@media (min-width: 768px) {
-  .collapsed {
-    padding: 40px;
-
-    .header {
-      flex-direction: column;
-      align-items: flex-start;
-
-      img {
-        width: 190px;
-        height: 190px;
-      }
-    }
-
-    .player {
-      justify-content: space-between;
-    }
-  }
 }
 
 @keyframes fromTop {
