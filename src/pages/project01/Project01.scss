@@ -1,17 +1,15 @@
-body {
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
   background-color: #0f0d13;
   color: #e1e1e6;
 
   * {
     font-family: "Roboto", sans-serif;
   }
-}
-
-.App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
 }
 
 .card {
